@@ -69,39 +69,32 @@ Model Comparison
 Final Model
 # 🧹 Data Preprocessing
 1. Target Separation
-
 The target variable was separated from the input features:
-
 y = df["Readmitted_30_Days"]
+
 2. Remove Patient ID
 df = df.drop("Patient_ID", axis=1)
+
 3. Categorical Encoding
-
 LabelEncoder was used for:
-
-Gender
-Smoking_Status
-Alcohol_Consumption
-
+* Gender
+* Smoking_Status
+* Alcohol_Consumption
 pd.get_dummies() was used for:
+* Heart_Failure_Type
 
-Heart_Failure_Type
 4. Train-Test Split
-
 The dataset was divided into:
-
-80% training data
-20% testing data
-random_state=42
+* 80% training data
+* 20% testing data
+* random_state=42
 
 For 12,000 records:
-
 Training samples: 9,600
 Testing samples: 2,400
+
 5. Feature Scaling
-
 StandardScaler was used to scale the features.
-
 The scaler was fitted on the training data and then used to transform the test data.
 
 scaler.fit(X_train)
@@ -112,34 +105,22 @@ This prevents information from the test set being used during the scaling proces
 
 # 🤖 Machine Learning Models
 1. Logistic Regression
-
 The final Logistic Regression configuration was:
-
 LogisticRegression(C=1, max_iter=1000)
-
 Logistic Regression was used as a binary classification model for predicting 30-day readmission.
 
 2. K-Nearest Neighbors
-
 Different values of k were experimented with:
-
 3, 5, 7, 9, 11, 15, 21
-
 5-fold cross-validation was used during the experiment.
-
 The final model used:
+KNeighborsClassifier(n_neighbors=5)
 
-KNeighborsClassifier(n_neighbors=15)
 3. Decision Tree
-
 Different max_depth values were experimented with:
-
 2, 3, 4, 5, 6, 8, 10, 15
-
 5-fold cross-validation was used during the experiment.
-
 The final model used:
-
 DecisionTreeClassifier(max_depth=5)
 
 # 📈 Model Performance
@@ -149,27 +130,21 @@ KNN	88.57%	83.96%	82.91%	58.61%	68.67%	87.85%
 Decision Tree	85.14%	83.83%	75.78%	67.78%	71.55%	89.07%
 # 📊 Evaluation Metrics
 Accuracy
-
 Measures the percentage of total predictions that were classified correctly.
 
 Precision
-
 Measures how many of the patients predicted as positive were actually positive.
 
 Recall
-
 Measures how many of the actual positive cases were correctly identified.
 
 F1-Score
-
 Provides a combined measure of Precision and Recall.
 
 ROC-AUC
-
 Measures the model's ability to distinguish between the two classes across different classification thresholds.
 
 Confusion Matrix
-
 The confusion matrix provides:
 
 True Positives (TP)
