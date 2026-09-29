@@ -216,7 +216,7 @@ Adjust the filenames and folders according to the actual files in your repositor
 
 # 🚀 How to Run
 1. Clone the Repository
-git clone https://github.com/your-username/Heart_Failure_30-Day_Readmission_Prediction.git
+git clone https://github.com/PremPrajapati1/Heart_Failure_30-Day_Readmission_Prediction.git
 2. Open the Project
 cd Heart_Failure_30-Day_Readmission_Prediction
 3. Create Virtual Environment
