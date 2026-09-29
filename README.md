@@ -124,10 +124,13 @@ The final model used:
 DecisionTreeClassifier(max_depth=5)
 
 # 📈 Model Performance
-Model	Train Accuracy	Test Accuracy	Precision	Recall	F1-Score	ROC-AUC
-Logistic Regression	89.44%	89.50%	85.24%	78.61%	81.79%	95.62%
-KNN	88.57%	83.96%	82.91%	58.61%	68.67%	87.85%
-Decision Tree	85.14%	83.83%	75.78%	67.78%	71.55%	89.07%
+
+| Model | Train Accuracy | Test Accuracy | Precision | Recall | F1-Score | ROC-AUC |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Logistic Regression** | 89.44% | 89.50% | 85.24% | 78.61% | 81.79% | 95.62% |
+| **KNN** | 88.57% | 83.96% | 82.91% | 58.61% | 68.67% | 87.85% |
+| **Decision Tree** | 85.14% | 83.83% | 75.78% | 67.78% | 71.55% | 89.07% |
+
 # 📊 Evaluation Metrics
 Accuracy
 Measures the percentage of total predictions that were classified correctly.
