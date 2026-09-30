@@ -230,8 +230,10 @@ venv\Scripts\activate
 Linux/macOS:
 
 source venv/bin/activate
+
 5. Install Dependencies
 pip install pandas numpy scikit-learn matplotlib seaborn jupyter
+
 6. Start Jupyter Notebook
 jupyter notebook
 
